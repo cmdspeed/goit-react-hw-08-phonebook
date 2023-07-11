@@ -58,6 +58,14 @@ export const App = () => {
               </PublicRoute>
             }
           />
+          <Route
+            path="*"
+            element={
+              <PublicRoute>
+                <Home />
+              </PublicRoute>
+            }
+          ></Route>
         </Routes>
       </>
     )
