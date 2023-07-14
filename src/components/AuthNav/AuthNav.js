@@ -1,10 +1,18 @@
-import { NavLink } from 'react-router-dom';
+import { styled } from 'styled-components';
+
+import { LoginBtn, RegisterBtn } from 'components/Buttons/Buttons.styled';
+
+const Wrapper = styled.div`
+  max-width: 320px;
+  margin: 30% auto;
+  font-size: 1.5rem;
+`;
 
 export const AuthNav = () => {
   return (
-    <div>
-      <NavLink to="/register">Register</NavLink>
-      <NavLink to="/login">Log In</NavLink>
-    </div>
+    <Wrapper>
+      <LoginBtn to="/login">Log In</LoginBtn>
+      <RegisterBtn to="/register">Register</RegisterBtn>
+    </Wrapper>
   );
 };

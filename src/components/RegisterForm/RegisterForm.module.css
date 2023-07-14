@@ -1,0 +1,31 @@
+.form {
+    max-width: 370px;
+    display: flex;
+    margin: 10% auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form input,
+.form button {
+    font-size: 1.2rem;
+    padding: 18px;
+    width: 360px;
+    border-radius: 6px;
+    border: 1px solid #dddfe2;
+    margin: 10px auto;
+}
+
+.form input:focus,
+.form input:focus-visible {
+    border-color: var(--brandColor);
+    box-shadow: 0 0 0 2px #e7f3ff;
+    caret-color: var(--brandColor);
+    outline: none;
+}
+
+.form button:hover {
+    opacity: 0.8;
+    color: white;
+    background-color: var(--brandColor);
+}

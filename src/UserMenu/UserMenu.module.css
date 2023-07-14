@@ -1,0 +1,34 @@
+.userWelcome {
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.userName {
+    color: var(--brandColor);
+}
+
+.userMenu {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logOutBtn {
+    background-color: white;
+    border: none;
+}
+
+.logOutBtn:hover {
+    opacity: 0.8;
+}
+
+.logoutPhoto {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.logoutContainer {
+    display: flex;
+    align-items: center;
+}

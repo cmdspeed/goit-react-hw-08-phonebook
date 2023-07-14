@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import css from './Phonebook.module.css';
 
-export const Phonebook = ({ handleSubmit }) => {
+export const Phonebook = ({ handleSubmit, handleClick }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -36,12 +36,13 @@ export const Phonebook = ({ handleSubmit }) => {
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
-        placeholder="Enter name"
+        placeholder="(e.g.) Shrek"
         value={name}
         onChange={handleChange}
       />
       <label className={css.inputName}>Number</label>
       <input
+        placeholder="+48 502-666-123"
         className={css.input}
         type="tel"
         name="number"
@@ -52,8 +53,12 @@ export const Phonebook = ({ handleSubmit }) => {
         onChange={handleChange}
       />
 
-      <button type="submit" className={css.btn}>
+      <button type="submit" className={css.btnAdd}>
         Add contact
+      </button>
+
+      <button onClick={handleClick} className={css.btnClose}>
+        Close
       </button>
     </form>
   );

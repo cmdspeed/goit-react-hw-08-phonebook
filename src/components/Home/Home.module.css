@@ -1,0 +1,13 @@
+.welcome {
+    display: flex;
+    margin: 50px auto;
+    max-width: 650px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo {
+    color: var(--brandColor);
+    text-align: center;
+}

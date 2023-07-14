@@ -9,7 +9,9 @@ import {
   addContactApi,
   deleteContactApi,
 } from '../../redux/operations';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AddContactBtn } from 'components/Buttons/AddContactBtn/AddContactBtn';
+import css from './ContactsList.module.css';
 
 export const ContactsList = () => {
   const dispatch = useDispatch();
@@ -18,6 +20,7 @@ export const ContactsList = () => {
   const error = useSelector(getError);
 
   const filter = useSelector(getFilter);
+  const [addBtnClicked, setAddBtnClicked] = useState(false);
 
   useEffect(() => {
     dispatch(getContactsApi());
@@ -49,13 +52,24 @@ export const ContactsList = () => {
     dispatch(deleteContactApi(id));
   };
 
+  const handleClick = () => {
+    return setAddBtnClicked(!addBtnClicked);
+  };
+
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <Phonebook handleSubmit={handleSubmit} />
-      <h2>Contacts</h2>
+    <div className={css.container}>
+      {addBtnClicked ? (
+        <Phonebook handleSubmit={handleSubmit} handleClick={handleClick} />
+      ) : (
+        <AddContactBtn handleClick={handleClick} />
+      )}
+      <h2 className={css.header}>Contacts</h2>
       <Filter filter={filter} handleChange={handleChange} />
-      {isLoading && !error && <div>Loading...</div>}
+      {isLoading && !error && (
+        <div>
+          <span className={css.loader}></span>
+        </div>
+      )}
 
       <PhoneBookList
         contacts={fitered()}

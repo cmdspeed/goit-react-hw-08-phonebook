@@ -1,0 +1,46 @@
+.list {
+    list-style: none;
+
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name {
+    color: var(--brandColor);
+}
+
+.numberWraper {
+    display: flex;
+}
+
+.number {
+    margin-right: 10px;
+}
+
+.removeIcon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.deleteBtn {
+    background-color: white;
+    border: none;
+}
+
+.deleteBtn:hover,
+.callIcon:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+.callIcon {
+    width: 32px;
+    height: 32px;
+    align-self: center;
+    display: block;
+}

@@ -7,9 +7,10 @@ export const Filter = ({ filter, handleChange }) => (
     <input
       type="text"
       name="filter"
-      placeholder="Search"
+      placeholder="Search 🔍"
       value={filter}
       onChange={handleChange}
+      className={css.search}
     />
   </div>
 );

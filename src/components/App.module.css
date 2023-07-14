@@ -1,0 +1,15 @@
+.logo {
+    color: var(--brandColor);
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.topMenu {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
